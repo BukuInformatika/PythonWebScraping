@@ -2,11 +2,38 @@ Pada bab ini, kita akan menjalankan program Python yang pertama yaitu, hello\_wo
 \section{Menyiapkan \textit{Programming Environment}}
 Di sini, kita akan melihat dua versi utama Python yang saat ini digunakan dan menguraikan langkah-langkah untuk menyiapkan Python pada sistem.
 \subsection{Python 2 dan Python 3}
+
 Saat ini, telah tersedia dua versi Python: Python 2 dan Python yang lebih baru, yaitu Python 3. Mengapa? Karena setiap bahasa pemrograman berevolusi ketika ide dan teknologi baru muncul atau berkembang, dan tentu saja para pengembang bahasa Python terus membuat Python agar lebih fleksibel dan kuat. Sebagian besar perubahan yang dilakukan, berkembang sedikit demi sedikit secara teratur dan hampir tidak terlihat, tetapi dalam beberapa kasus kode yang ditulis untuk Python 2 mungkin tidak berjalan dengan baik pada sistem yang menggunakan Python 3.
 \subsection{Menjalankan Kode}
+
 Python dilengkapi dengan \textit{interpreter} yang berjalan di jendela terminal, yang memungkinkan kita untuk mencoba kode Python tanpa harus menyimpan dan menjalankan seluruh program. Contohnya adalah seperti pada
-\begin{lstlisting}[linewidth=5.4cm, language=Python, label={lst:hello}]
+\begin{lstlisting}[language=Python, label={lst:hello}, caption=Kode Pada Jendela Terminal]
 >>> print("Hello World!")
 Hello World!
 \end{lstlisting}
-Pada baris pertama, adalah baris yang kita tuliskan sendiri perintahnya, lalu bisa dieksekusi dengan cara menekan tombol enter. Sebagian besar contoh yang akan ditampilkan pada buku ini akan dijalankan melalui teks editor, karena kita akan menulis kode pada teks editor tersebut. Setiap kali Anda melihat tiga buah tanda kurung siku seperti pada \ref{lst:hello} itu artinya kita sedang mengunakan jendela terminal.
+Pada baris pertama, adalah baris yang kita tuliskan sendiri perintahnya, lalu bisa dieksekusi dengan cara menekan tombol enter. Sebagian besar contoh yang akan ditampilkan pada buku ini akan dijalankan melalui teks editor, karena kita akan menulis kode pada teks editor tersebut. Setiap kali Anda melihat tiga buah tanda tanda panah sebelah kiri seperti pada listing \ref{lst:hello} itu artinya kita sedang mengunakan jendela terminal. Listing \ref{lst:hello} menunjukan program sederhana yang umum dilakukan \textit{programmer} pada awal pembelajaran. Jika kode berjalan dengan sesuai, maka apapun program yang telah dibuat menggunakan Python bisa berjalan dengan sempurna.
+\subsection{Python pada Berbagai Sistem Operasi}
+
+Python adalah bahasa pemrograman lintas platform, yang artinya berjalan pada semua sistem operasi, seperti Windows, Linux, dan OS X. Program Python apa pun bisa dijalankan pada seluruh sitem yang telah terpasang Python sebelumnya. Namun, cara untuk mengatur Python pada setiap sistem operasi akan berbeda. Di bagian ini kita akan belajar cara men-\textit{set up} Python dan menjalankan program Hello World pada setiap sistem operasi.Yang pertama adalah, kita akan memeriksa apakah Python telah ter-\textit{install} dengan benar atau belum. Kemudian, menginstal teks editor sederhana dan menyimpan file Python kosong bernama hello\_world.py. Tahap terakhir, yaitu menjalankan program Hello World.
+\subsubsection{Python pada Windows}
+
+Pertama, periksa apakah Python telah terpasang pada sistem atau belum, dengan cara buka \textit{Command Prompt} dengan memasukkan atau mengetikan kata "cmd" pada menu Start. Pada jendela terminal, ketikan python dalam huruf kecil. Jika mendapatkan prompt Python \verb|(>>>)|, Python telah terpasang pada sistem. Namun, jika melihat pesan kesalahan yang mengatakan bahwa python adalah  bukan perintah yang dikenali.
+Jika demikian, unduh Python \textit{Installer} untuk Windows. Buka \verb|http://python.org/downloads/|. Akan tersedia dua pilihanl, satu untuk mengunduh Python 3 dan satu lagi untuk mengunduh Python 2. Klik tombol Python 3, lalu secara otomatis mulai mengunduh \textit{Installer}. Setelah \textit{Installer} berhasil terunduh, jalankan \textit{Installer}. Pastikan mencentang opsi \textit{Add Python to PATH}, agar lebih mudah untuk mengkonfigurasi sistem dengan benar.
+
+Sekarang kita akan memulai untuk mencoba apakah Python sudah terpasang dengan benar atau belum, dengan cara membuka \textit{Command Prompt} lalu mengetik \textbf{python}. Jika mendapatkan prompt Python \verb|(>>>)|, Python telah terpasang pada sistem dengan berhasil. 
+\begin{lstlisting}[language=Python, label={lst:success}, caption=Python Yang Telah Terpasang]
+C:\> python
+Python 3.5.0 (v3.5.0:374f501f4567,
+Mar 19 2019, 22:15:05)
+[MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license"
+for more information.
+>>>
+\end{lstlisting}
+
+\subsection{Mengatasi Masalah Umum Pada Python}
+Jika tidak dapat menjalankan hello\_world.py, berikut adalah beberapa solusi yang dapat gunakan atau dapat dicoba:
+\begin{itemize}
+\item Ketika sebuah program mengandung kesalahan yang cukup besar, Python akan selalu menampilkan \textit{traceback}. Python melihat melalui file dan mencoba melaporkan atau memberitahu masalahnya. \textit{Traceback} bisa memberi petunjuk tentang masalah apa yang menghambat program berjalan.
+\item  Ingat bahwa sintaks sangat penting dalam pemrograman, tanda kutip yang tidak cocok, atau tanda kurung yang tidak cocok dapat menghambat program berjalan.
+\end{itemize}
