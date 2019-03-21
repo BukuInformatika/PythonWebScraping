@@ -1,8 +1,29 @@
-
-\par \textbf{Apa Itu Web Scraping?}
+\section{Web Scraping}
+\subsection{Apa Itu Web Scraping?}
 \par Secara teori, pengikisan web adalah praktik mengumpulkan data melalui cara apa pun selain program yang berinteraksi dengan API (atau melalui manusia menggunakan browser). Cara ini paling umum dilakukan dengan menulis program otomatis yang membutuhkan server web, meminta data (biasanya dalam bentuk HTML, Json, dan file lain yang terdiri dari halaman web), dan kemudian mem-\textit{parsing} data tersebut untuk mengekstrak informasi yang diperlukan. Sedangkan pada praktiknya,\textit{web scraping} mencakup beragam teknik dan teknologi pemrograman, seperti analisis data dan keamanan informasi.
 
-\textbf{Mengapa Web Scraping?}
+\subsection{Mengapa Web Scraping?}
 \par Ada banyak alasan mengapa web scraping semakin dibutuhkan pada abad ke 21 ini. Dengan semakin berkembangnya data, jumlah data yang tersedia mungkin sudah tidak terhitung lagi. Bayangkan jika kita membutuhkan data-data itu lalu Anda harus mengumpulkan dan menyimpan jutaan data dalam satu file. Teknik web scraping bisa membantu kita untuk mengumpulkan data dengan lebih cepat dan otomatis, semua akan berjalan lancar selama server masih berfungsi.
 
 Efisiennya teknik web scraping ini juga membantu proses pengambilan data demi kebutuhan analisa. Karena web scraping membantu mengumpulkan semua data tanpa terlewat. Dengan begitu, Anda akan mendapat insight yang bernilai dengan lebih cepat. Kita juga bisa memanfaatkan web scraping untuk mengumpulkan data lain yang penting.
+
+Selain di dunia bisnis, di dunia seni pun, web scraping telah diterapkan untuk proyek 2006 “We Feel Fine” oleh Jonathan Harris dan Sep Kamvar, men-\textit{scrap} berbagai situs blog berbahasa Inggris untuk frasa yang dimulai dengan “I feel” atau “I am feeling” dan dengan data tersebut, bisa diolah menjadi visualisasi data bagaimana perasaan orang-orang di dunia setiap harinya. Terlepas dari bidang apapun, hampir selalu ada cara\textit{web scraping} dapat memandu bisnis lebih efektif dan meningkatkan produktivitas.
+
+\subsection{Teknik web scraping}
+Dengan semakin banyaknya orang yang melakukan web scraping, ada beberapa teknik automasi yang bisa Anda lakukan untuk melakukan web scraping.
+
+\subsubsection{Parsing HTML}
+
+Parsing HTML adalah salah satu teknik yang paling banyak digunakan dalam web parsing atau web scraping. Biasanya parsing HTML dilakukan menggunakan JavaScript dan menarget halaman HTML linear dan nested. Metode ini dapat mengidentifikasi script HTML dari websia. Script ini juga kemudian digunakan untuk mengekstraksi text, links, dan data.
+
+\subsubsection{Parsing DOM}
+
+\textit{Content, style, dan XML structure} didefinisikan dalam Document Object Model atau yang biasa disebut DOM. Biasanya programmer yang ingin mengetahui cara kerja internal halaman web dan mengekstrak \textit{script} yang berjalan di dalamnya biasa memilih untuk melakukan \textit{web scraping} melalui parsing DOM. Node spesifik dikumpulkan terlebih dahulu menggunakan DOM yang terlah diparsing dan XPath membantu mempermudah proses scraping.
+
+\subsubsection{XPath}
+
+\textit{XML Path Language} atau lebih familiar dengan istilah XPath adalah bahasa \textit{query} yang bekerja di dokumen XML. Karena dokumen XML biasa disusun dengan \textit{tree structure}, XPath bisa digunakan untuk menganalisa struktur dokumen tersebut dengan memilih nodes berdasarkan parameter. XPath juga lazim digunakan bersamaan dengan DOM parsing dalam mengesktrasi seluruh halaman website.
+
+\subsubsection{Google Docs}
+
+Salah satu produk Google yaitu Google Sheets juga ternyata bisa dipakai sebagai salah satu alat scraping,, dan ini adalah salah satu alat scraping yang cukup popoler karena cara penggunaannya yang tidak rumit dan tidak membutuhkan keahlian khusus. Pada Google Sheets sendiri, kita bisa memanfaatkan fungsi IMPORTXML untuk melakukan scraping data dari website. Selain itu, juga bisa menggunakan command ini untuk melihat apakah sebuah website aman dari tindakan scraping atau tidak.
