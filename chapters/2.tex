@@ -1,9 +1,11 @@
 \section{Web Scraping}
 \subsection{Apa Itu Web Scraping?}
-\par Secara teori, pengikisan web adalah praktik mengumpulkan data melalui cara apa pun selain program yang berinteraksi dengan API (atau melalui manusia menggunakan browser). Cara ini paling umum dilakukan dengan menulis program otomatis yang membutuhkan server web, meminta data (biasanya dalam bentuk HTML, Json, dan file lain yang terdiri dari halaman web), dan kemudian mem-\textit{parsing} data tersebut untuk mengekstrak informasi yang diperlukan. Sedangkan pada praktiknya,\textit{web scraping} mencakup beragam teknik dan teknologi pemrograman, seperti analisis data dan keamanan informasi.
+
+Secara teori, \textit{web scraping} adalah praktik mengumpulkan data melalui cara apa pun selain program yang berinteraksi dengan API (atau melalui manusia menggunakan browser). Cara ini paling umum dilakukan dengan menulis program otomatis yang membutuhkan server web, meminta data (biasanya dalam bentuk HTML, Json, dan file lain yang terdiri dari halaman web), dan kemudian mem-\textit{parsing} data tersebut untuk mengekstrak informasi yang diperlukan. Sedangkan pada praktiknya,\textit{web scraping} mencakup beragam teknik dan teknologi pemrograman, seperti analisis data dan keamanan informasi.
 
 \subsection{Mengapa Web Scraping?}
-\par Ada banyak alasan mengapa web scraping semakin dibutuhkan pada abad ke 21 ini. Dengan semakin berkembangnya data, jumlah data yang tersedia mungkin sudah tidak terhitung lagi. Bayangkan jika kita membutuhkan data-data itu lalu Anda harus mengumpulkan dan menyimpan jutaan data dalam satu file. Teknik web scraping bisa membantu kita untuk mengumpulkan data dengan lebih cepat dan otomatis, semua akan berjalan lancar selama server masih berfungsi.
+
+Ada banyak alasan mengapa web scraping semakin dibutuhkan pada abad ke 21 ini. Dengan semakin berkembangnya data, jumlah data yang tersedia mungkin sudah tidak terhitung lagi. Bayangkan jika kita membutuhkan data-data itu lalu Anda harus mengumpulkan dan menyimpan jutaan data dalam satu file. Teknik web scraping bisa membantu kita untuk mengumpulkan data dengan lebih cepat dan otomatis, semua akan berjalan lancar selama server masih berfungsi.
 
 Efisiennya teknik web scraping ini juga membantu proses pengambilan data demi kebutuhan analisa. Karena web scraping membantu mengumpulkan semua data tanpa terlewat. Dengan begitu, Anda akan mendapat insight yang bernilai dengan lebih cepat. Kita juga bisa memanfaatkan web scraping untuk mengumpulkan data lain yang penting.
 
@@ -11,19 +13,34 @@ Selain di dunia bisnis, di dunia seni pun, web scraping telah diterapkan untuk p
 
 \subsection{Teknik web scraping}
 Karena web scraping sudah mulai familiar, maka banyak orang yang melakukannya karena beberapa kemudahan yang telah dijabarkan diatas, ada beberapa teknik automasi yang bisa kita lakukan untuk melakukan web scraping.
+\begin{enumerate}
 
-\subsubsection{Parsing HTML}
+\item Parsing HTML
 
 Parsing HTML adalah salah satu teknik yang paling banyak digunakan dalam web parsing atau web scraping. Biasanya parsing HTML dilakukan menggunakan JavaScript dan menarget halaman HTML linear dan nested. Metode ini dapat mengidentifikasi script HTML dari websia. Script ini juga kemudian digunakan untuk mengekstraksi text, links, dan data.
 
-\subsubsection{Parsing DOM}
+\item Parsing DOM
 
 \textit{Content, style, dan XML structure} didefinisikan dalam Document Object Model atau yang biasa disebut DOM. Beberapa programmer yang ingin mengetahui cara kerja sebuah internal web dan ingin mengekstrak \textit{script} yang berjalan di dalamnya akan lebih memilih untuk melakukan \textit{web scraping} melalui parsing DOM. Node dikumpulkan terlebih dahulu menggunakan DOM yang terlah diparsing dan XPath membantu mempermudah proses scraping.
 
-\subsubsection{XPath}
+\item XPath
 
 \textit{XML Path Language} atau lebih familiar dengan istilah XPath adalah bahasa \textit{query} yang bekerja pada dokumen Extensible Markup Language atau biasa disebut XML. Dokumen XML biasa disusun dengan \textit{tree structure}, XPath bisa digunakan untuk menganalisa struktur dokumen dengan memilih nodes berdasarkan parameter yang telah tersedia. XPath juga lazim digunakan bersamaan dengan DOM parsing dalam mengesktrasi seluruh halaman website.
 
-\subsubsection{Google Docs}
+\item Google Docs
 
 Salah satu produk Google yaitu Google Sheets juga ternyata bisa dipakai sebagai salah satu alat scraping,, dan ini adalah salah satu alat scraping yang cukup popoler karena cara penggunaannya yang tidak rumit dan tidak membutuhkan keahlian khusus. Pada Google Sheets sendiri, kita bisa memanfaatkan fungsi IMPORTXML untuk melakukan scraping data dari website. Selain itu, juga bisa menggunakan command ini untuk melihat apakah sebuah website aman dari tindakan scraping atau tidak.
+\end{enumerate}
+
+\subsection{Resiko dan Ancaman}
+
+Pada perspektif Bisnis, otomatisasi web seperti web scraping, juga memiliki dampak negatif. Yang berpengaruh disini adalah reputasi perusahaan, SOP, dan proses bisnis internal. Beberapa resiko yang mungkin akan timbul adalah:
+\begin{enumerate}
+
+\item Data statistik: Setiap \textit{request} yang dilakukan oleh robot sangat kecil kemungkinannya akan tercatat pada laporan statistik, sehingga akan menyebabkan data analisis tersebut akan menjadi bias atau tidak akurat. Dan dengan ketidak akuratannya data statistik tersebut, tim bisnis marketing akan beresiko salah dalam contohnya menganalisa pasar, dan mengambil keputusan bisnis.
+
+\item Bulk Order: Dengan otomatis, web robot memungkinkan untuk membuat random dan distributed order fiktif. Tujuannya bisa beragam, mungkin ingin merusak bisnis kompetitor dengan menghabiskan stock barang yang dimilikinya, atau hanya sekedar seseorang yang mengambil barang promosi dengan jumlah sangat banyak, dan menjuanya kembali dengan harga normal.
+\end{enumerate}
+
+\subsection{Pertahanan}
+Pertahanan yang paling efektif dalam menaggulangi bot adalah memblokir IP agar tidak dapat mengakses website lagi, atau bisa dengan cara me-\textit{redirect}-nya ke halaman captcha, seperti yang dilakukan google.com apabila mereka mencurigai suatu IP Penggunaan Captcha sangat efektif dalam mendeteksi apakah yang mengakses website adalah user sesungguhnya atau hanya robot.
