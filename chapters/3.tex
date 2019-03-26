@@ -23,3 +23,30 @@ BeautifulSoup sekarang akan dikenali sebagai \textit{library} Python di sistem. 
 \$ python
 bs4 import from BeautifulSoup
 \end{algorithm}
+
+
+\textbf{Menjalankan BeautifulSoup}
+
+sebelum kita melompat pada kode, mari kita bahas terlebih dahulu hal-hal mendasar dari HTML, dan beberapa aturan dalam \textit{web scraping}
+\begin{algorithm}
+<!DOCTYPE html>  
+<html>  
+    <head>
+    </head>
+    <body>
+        <h1> First Scraping </h1>
+        <p> Hello World </p>
+    <body>
+</html>
+\end{algorithm}
+\begin{enumerate}
+
+\item \verb|<! DOCTYPE html>:| Dokumen HTML harus dimulai dengan deklarasi tipe.
+\item Dokumen HTML terdapat di antara \verb|<html>| dan \verb|</html>.|
+\item Deklarasi meta dan skrip dari dokumen HTML berada di antara \verb|<head>| dan \verb|</head>.|
+\item Bagian yang terlihat dari dokumen HTML adalah antara tag \verb|<body>| dan \verb|</body>.|
+\item Judul judul didefinisikan dengan tag \verb|<h1>| hingga \verb|<h6>.|
+\item Paragraf didefinisikan dengan tag \verb|<p>.|
+\end{enumerate}
+
+Tag berguna lainnya termasuk \verb|<a>| untuk hyperlink, \verb|<table>| untuk tabel, \verb|<tr>| untuk baris tabel, dan \verb|<td>| untuk kolom tabel. Juga, tag HTML kadang-kadang datang dengan atribut id atau kelas. Atribut id menentukan id unik untuk tag HTML dan nilainya harus unik dalam dokumen HTML. Atribut kelas digunakan untuk menentukan gaya yang sama untuk tag HTML dengan kelas yang sama. Kita dapat menggunakan id dan kelas ini untuk membantu kita menemukan data yang kita inginkan.
