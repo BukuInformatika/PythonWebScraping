@@ -27,7 +27,9 @@ bs4 import from BeautifulSoup
 
 \textbf{Menjalankan BeautifulSoup}
 
-sebelum kita melompat pada kode, mari kita bahas terlebih dahulu hal-hal mendasar dari HTML, dan beberapa aturan dalam \textit{web scraping}
+Sebelum kita melompat pada kode, mari kita bahas terlebih dahulu hal-hal mendasar dari HTML, dan beberapa aturan dalam \textit{web scraping}
+\begin{enumerate}
+\item HTML TAG
 \begin{algorithm}
 <!DOCTYPE html>  
 <html>  
@@ -50,3 +52,12 @@ sebelum kita melompat pada kode, mari kita bahas terlebih dahulu hal-hal mendasa
 \end{enumerate}
 
 Tag berguna lainnya termasuk \verb|<a>| untuk hyperlink, \verb|<table>| untuk tabel, \verb|<tr>| untuk baris tabel, dan \verb|<td>| untuk kolom tabel. Juga, tag HTML kadang-kadang datang dengan atribut id atau kelas. Atribut id menentukan id unik untuk tag HTML dan nilainya harus unik dalam dokumen HTML. Atribut kelas digunakan untuk menentukan gaya yang sama untuk tag HTML dengan kelas yang sama. Kita dapat menggunakan id dan kelas ini untuk membantu kita menemukan data yang kita inginkan.
+
+\item{Aturan Scraping}
+\begin{enumerate}
+\item Periksa terllebih dahulu Syarat dan Ketentuan situs web tujuan sebelum melakukan \textit{scraping}. Berhati-hatilah untuk membaca pernyataan tentang penggunaan data secara legal. 
+\item Jangan meminta data dari situs web terlalu agresif atau terlalu sering dengan program yang telah dibuat (juga dikenal sebagai spam), karena ini dapat merusak situs web. Pastikan program berperilaku dengan cara yang masuk akal (mis. Bertindak seperti manusia). Satu request untuk satu halaman web per detik adalah yang paling disarankan.
+\item \textit{layout} situs web dapat berubah dari waktu ke waktu, jadi pastikan untuk mengunjungi kembali situs dan menulis ulang kode sesuai kebutuhan.
+\end{enumerate}
+\end{enumerate}
+
