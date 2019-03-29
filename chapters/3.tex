@@ -1,31 +1,7 @@
-\section{Membangun Web Scraper}
-\subsection{BeautifulSoup}
-\par Beautiful Soup adalah \textit{library} Python untuk menarik atau mengambil data dari file HTML dan XML. Hal ini bisa bekerja dengan parser apapun untuk menavigasi, mencari, dan memodifikasi pohon parse. Ini biasanya menghemat waktu menulis kode dan hari kerja. BeautifulSoup juga mencoba memahami yang tidak masuk akal; sedikit membantu memformat ulang dan mengatur web yang berantakan dengan memperbaiki HTML yang kacau dan menyajikan kepada kita struktur dalam Python yang mudah dibaca dan mewakili struktur XML.
-\textbf{Menginstal BeautifulSoup}
-Karena \textit{library} BeautifulSoup bukan Python \textit{library} default, maka harus terlebih dahulu diinstal. Kita akan menggunakan \textit{library} BeautifulSoup versi 4 (BS4).
-
-untuk Linux:
-
-\$ sudo apt-get install python-bs4
-
-dan untuk Mac:
-
-\$ sudo easy\_install pip
-
-Menginstal \textit{package} di Windows hampir sama dengan proses untuk Mac dan Linux. Unduh rilisan terakhir BeautifulSoup 4, navigasikan ke direktori tempat megekstrak lalu jalankan:
-
-instal setup.py python
-
-BeautifulSoup sekarang akan dikenali sebagai \textit{library} Python di sistem. Kita masih bisa menguji ini dengan membuka terminal Python dan mengimportnya:
-
-\begin{algorithm}
-
-\$ python
-bs4 import from BeautifulSoup
-\end{algorithm}
+\chapter{Membangun Web Scraper}
 
 
-\textbf{Menjalankan BeautifulSoup}
+\subsection{Struktur HTML}
 
 Sebelum kita melompat pada kode, mari kita bahas terlebih dahulu hal-hal mendasar dari HTML, dan beberapa aturan dalam \textit{web scraping}
 \begin{enumerate}
@@ -61,3 +37,43 @@ Tag berguna lainnya termasuk \verb|<a>| untuk hyperlink, \verb|<table>| untuk ta
 \end{enumerate}
 \end{enumerate}
 
+\subsection{BeautifulSoup}
+\par Beautiful Soup adalah \textit{library} Python untuk menarik atau mengambil data dari file HTML dan XML. Hal ini bisa bekerja dengan parser apapun untuk menavigasi, mencari, dan memodifikasi pohon parse. Ini biasanya menghemat waktu menulis kode dan hari kerja. BeautifulSoup juga mencoba memahami yang tidak masuk akal; sedikit membantu memformat ulang dan mengatur web yang berantakan dengan memperbaiki HTML yang kacau dan menyajikan kepada kita struktur dalam Python yang mudah dibaca dan mewakili struktur XML.
+\textbf{Menginstal BeautifulSoup}
+Karena \textit{library} BeautifulSoup bukan Python \textit{library} default, maka harus terlebih dahulu diinstal. Kita akan menggunakan \textit{library} BeautifulSoup versi 4 (BS4).
+
+untuk Linux:
+
+\$ sudo apt-get install python-bs4
+
+dan untuk Mac:
+
+\$ sudo easy\_install pip
+
+Menginstal \textit{package} di Windows hampir sama dengan proses untuk Mac dan Linux. Unduh rilisan terakhir BeautifulSoup 4, navigasikan ke direktori tempat megekstrak lalu jalankan:
+
+instal setup.py python
+
+BeautifulSoup sekarang akan dikenali sebagai \textit{library} Python di sistem. Kita masih bisa menguji ini dengan membuka terminal Python dan mengimportnya:
+
+\begin{algorithm}
+
+\$ python
+bs4 import from BeautifulSoup
+\end{algorithm}
+
+\textbf{Menjalankan BeautifulSoup}
+Objek yang paling umum digunakan denga library BeautifulSoup adalah, objek BeautifulSoup itu sendiri.
+\begin{lstlisting}[language=Python, label={lst:example}, caption=Contoh Sederhana]
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen("http://kampus.awangga.net/")
+bsObj = BeautifulSoup(html.read())
+print(bsObj.h2)
+\end{lstlisting}
+
+outputnya akan menjadi:
+
+\verb|<h2>Portal Kampus Keren<h2>|
+
+Seperti pada listing \ref{lst:example}, mengimpor library urlopen dan memanggil \verb|html.read ()| untuk mendapatkan konten HTML dari halaman tersebut. Konten HTML ini kemudian diubah menjadi objek BeautifulSoup, dengan struktur berikut:
