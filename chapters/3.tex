@@ -67,13 +67,39 @@ Objek yang paling umum digunakan denga library BeautifulSoup adalah, objek Beaut
 \begin{lstlisting}[language=Python, label={lst:example}, caption=Contoh Sederhana]
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-html = urlopen("http://kampus.awangga.net/")
+html = urlopen("http://examplesite.com/")
 bsObj = BeautifulSoup(html.read())
-print(bsObj.h2)
+print(bsObj.h1)
 \end{lstlisting}
 
 outputnya akan menjadi:
 
-\verb|<h2>Portal Kampus Keren<h2>|
+\verb|<h1>Hello<h1>|
 
 Seperti pada listing \ref{lst:example}, mengimpor library urlopen dan memanggil \verb|html.read ()| untuk mendapatkan konten HTML dari halaman tersebut. Konten HTML ini kemudian diubah menjadi objek BeautifulSoup, dengan struktur berikut:
+
+\verb|html-><html><head>...</head><body>...</body></html>|
+
+\verb|head-><head><title>Contoh..<title></head>|
+
+\verb|title-><title>Halaman Contoh</title>|
+
+\verb|body-><body><h1>contoh</h1><div>Ini Halam...</div></body>|
+
+\verb|h1 -><h1>Hello</h1>|
+
+\verb|div-><div>Ini Halaman contoh</div>|
+
+Perhatikan bahwa tag \verb|<h1>| yang telah diekstrak dari halaman website dua lapisan jauh ke dalam struktur objek BeautifulSoup \verb|(html -> body -> h1)|. Namun, jika hanya ingin mengambil dari objek secara langsung, bisa memanggil tag h1 dengan cara:
+
+\verb|bsObj.h1|
+
+Atau bisa juga dengan salah satu cara di bawah ini
+
+\verb|bsObj.html.body.h1|
+
+\verb|bsObj.body.h1|
+
+\verb|bsObj.html.h1|
+
+Pada bab selanjutnya, kita akan mempelajari lebih dalam tentang fungsi-fungsi dari beautifulsoup, semoga dengan sedikit contoh pada bab ini akan memberi gambaran untuk bab-bab selanjutnya.
