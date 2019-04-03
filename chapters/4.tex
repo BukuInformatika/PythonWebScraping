@@ -1,0 +1,14 @@
+Find () dan findAll () adalah dua fungsi BeautifulSoup yang akan sering digunakan. Dengan kedua fungsi ini, kita dapat dengan mudah mem-\textit{filter} halaman HTML untuk menemukan daftar tag yang diinginkan, atau satu tag, berdasarkan berbagai atribut mereka. Kedua fungsi ini sangat mirip:
+
+\verb|findAll (tag, atribut, rekursif, teks, batas, kata kunci)|
+\verb|find (tag, atribut, rekursif, teks, kata kunci)|
+
+Dalam banyak kesempatan, 95\% dari waktu kita saat menulis kode, kita akan menggunakan dua argumen pertama, yaitu tag dan attribut. Tag digunakan untuk mendeklarasikan sebuah objek.  Misalnya, yang berikut ini akan mengembalikan daftar semua argumen tag dalam dokumen: 1
+
+\verb|.findAll ({"h1", "h2", "h3", "h4", "h5", "h6"})|
+
+Argumen atribut mengambil library Python dari atribut dan mencocokkan tag yang ada padai salah satu dari atribut tersebut. Misalnya, fungsi berikut akan me-\textit{return} tag hijau dan merah di dokumen HTML:
+
+\verb|.findAll ("span", {"class": "green", "class": "red"})|
+
+Argumen rekursif adalah boolean. Seberapa dalam kita ingin masuk ke dalam sebuah struktur HTML? Jika rekursif diset ke True, fungsi findAll melihat ke \textit{children}, dan \textit{children’s children}, untuk tag yang cocok dengan parameter. Jika itu salah, ia hanya akan melihat tag paling atas dalam dokumen. Secara default, findAll bekerja secara rekursif (rekursif diset ke True);
